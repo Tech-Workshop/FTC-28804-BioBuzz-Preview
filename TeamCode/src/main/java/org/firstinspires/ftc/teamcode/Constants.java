@@ -105,6 +105,13 @@ public class Constants {
 		public static final String BALLSTOP_POLLEN_ID = "ballstop_nectar"; //Axon Mini+
 		public static final double BALLSTOP_POLLEN_BLOCK=0.48; //Minimum down position
 		public static final double BALLSTOP_POLLEN_CLEAR=0.28; //Maximum up position
+		public static final String SHOOTER_ID = "shooter";
+		public static final DcMotorSimple.Direction SHOOTER_DIRECTION = DcMotorSimple.Direction.REVERSE;
+
+		public static final String BALL_STOP_ID = "ball_stop"; //Axon Max
+		public static final double BALL_STOP_DOWN=0.48; //Minimum down position
+		public static final double BALL_STOP_UP=0.28; //Maximum up position
+
 	}
 
 	/*
