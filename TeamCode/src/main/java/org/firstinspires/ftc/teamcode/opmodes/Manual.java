@@ -1,12 +1,9 @@
 package org.firstinspires.ftc.teamcode.opmodes;
 
-import static org.firstinspires.ftc.teamcode.utility.MathUtility.clamp;
-
 import com.pedropathing.api.PoseFactory;
 import com.pedropathing.drivetrain.DrivePowers;
 import com.pedropathing.follower.Follower;
 import com.pedropathing.follower.ManualDrive;
-import com.pedropathing.math.Pose;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.CRServo;
@@ -15,11 +12,19 @@ import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
+import org.firstinspires.ftc.robotcontroller.external.samples.externalhardware.RobotHardware;
 import org.firstinspires.ftc.teamcode.Constants;
-import org.firstinspires.ftc.teamcode.utility.MathUtility;
+import org.firstinspires.ftc.teamcode.Robot;
 
 @TeleOp(group = "DEMO",name="Demo")
-public class Demo extends LinearOpMode {
+public class Manual extends LinearOpMode {
+	private final Robot robot = Robot.getInstance();
+
+
+
+
+
+
 	private Follower follower;
 	private DcMotorEx leftFrontDrive,leftBackDrive,rightFrontDrive,rightBackDrive,intake,shooter;
 	private Servo intakeRetractorLeft,intakeRetractorRight,ballStop;
@@ -77,10 +82,6 @@ public class Demo extends LinearOpMode {
 		intakeRetractorLeft = hardwareMap.get(Servo.class, Constants.Intake.INTAKE_RETRACTOR_LEFT);
 		intakeRetractorRight = hardwareMap.get(Servo.class, Constants.Intake.INTAKE_RETRACTOR_RIGHT);
 		*/
-
-		//Indexing servos
-		indexerLeft = hardwareMap.get(CRServo.class, Constants.Indexer.INDEXER_LEFT_ID);
-		indexerRight = hardwareMap.get(CRServo.class, Constants.Indexer.INDEXER_RIGHT_ID);
 
 		//Initialize servo positions
 		initializeServos();
