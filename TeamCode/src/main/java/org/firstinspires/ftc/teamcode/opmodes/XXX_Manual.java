@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode.opmodes;
 
 import com.pedropathing.api.PoseFactory;
@@ -47,7 +48,7 @@ public class Manual extends LinearOpMode {
 		follower.update();
 
 		//Drivetrain motors
-		/*
+
 		leftFrontDrive = hardwareMap.get(DcMotorEx.class, Constants.Drive.DRIVE_LEFT_FRONT_ID);
 		leftBackDrive = hardwareMap.get(DcMotorEx.class, Constants.Drive.DRIVE_LEFT_BACK_ID);
 		rightFrontDrive = hardwareMap.get(DcMotorEx.class, Constants.Drive.DRIVE_RIGHT_FRONT_ID);
@@ -62,10 +63,20 @@ public class Manual extends LinearOpMode {
 		leftBackDrive.setDirection(Constants.Drive.DRIVE_LEFT_BACK_DIRECTION);
 		rightFrontDrive.setDirection(Constants.Drive.DRIVE_RIGHT_FRONT_DIRECTION);
 		rightBackDrive.setDirection(Constants.Drive.DRIVE_RIGHT_BACK_DIRECTION);
-		*/
+
 
 		//Intake motors
-		intake = hardwareMap.get(DcMotorEx.class, Constants.Intake.INTAKE_ID);
+
+import com.pedropathing.drivetrain.DrivePowers;
+import com.pedropathing.follower.ManualDrive;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorEx;
+import com.qualcomm.robotcore.hardware.Servo;
+
+import org.firstinspires.ftc.teamcode.Constants;
+import org.firstinspires.ftc.teamcode.utility.MathUtility;
+
+intake = hardwareMap.get(DcMotorEx .class, Constants.Intake.INTAKE_ID);
 		intake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 		intake.setDirection(Constants.Intake.INTAKE_DIRECTION);
 
@@ -75,13 +86,7 @@ public class Manual extends LinearOpMode {
 		shooter.setDirection(Constants.Shooter.SHOOTER_DIRECTION);
 
 		//Ball stop servo
-		ballStop = hardwareMap.get(Servo.class, Constants.Shooter.BALL_STOP_ID);
-
-		//Intake retraction servos
-		/*
-		intakeRetractorLeft = hardwareMap.get(Servo.class, Constants.Intake.INTAKE_RETRACTOR_LEFT);
-		intakeRetractorRight = hardwareMap.get(Servo.class, Constants.Intake.INTAKE_RETRACTOR_RIGHT);
-		*/
+		ballStop = hardwareMap.get(Servo .class, Constants.Shooter.BALL_STOP_ID);
 
 		//Initialize servo positions
 		initializeServos();
@@ -92,7 +97,7 @@ public class Manual extends LinearOpMode {
 			//------------------------------------------
 			//DRIVE
 
-			/*
+
 			float drive = -gamepad1.left_stick_y;  // Note: Motor direction is reversed, so negative y is forward
 			float strafe = gamepad1.left_stick_x;
 			float turn = gamepad1.right_stick_x;
@@ -127,7 +132,7 @@ public class Manual extends LinearOpMode {
 			leftBackDrive.setPower(backLeftPower);
 			rightFrontDrive.setPower(frontRightPower);
 			rightBackDrive.setPower(backRightPower);
-			*/
+
 
 			//Check for low-speed mode
 			double SPEED_MULTIPLIER = 1.0;
@@ -145,7 +150,7 @@ public class Manual extends LinearOpMode {
 			follower.manual(powers);
 			follower.update();
 
-			/*
+
 			//Current robot heading
 			double headingCurrent = MathUtility.normalizeAngle(follower.pose().heading());
 
@@ -208,7 +213,7 @@ public class Manual extends LinearOpMode {
 			ManualDrive.driveOrHold(follower, powers); //Keeps robot in position when sticks are released
 			//follower.manual(powers); //Old method for applying power (does not lock when sticks released)
 			follower.update();
-*/
+
 			//Display pose to screen
 
 			telemetry.addData("Robot X", follower.pose().x());
@@ -227,10 +232,8 @@ public class Manual extends LinearOpMode {
 				telemetry.addData("Shooter (RPM)",getShooterRPM());
 
 				//TODO: Calculate shooter power using PID (replacing above)
-				/*
-				double shooterPower=clamp(shooterPIDCalculate(getShooterRPM(),2000));
-				shooter.setPower(shooterPower);
-				*/
+				// double shooterPower=clamp(shooterPIDCalculate(getShooterRPM(),2000));
+				// shooter.setPower(shooterPower);
 
 				if(shooterDelay.seconds()>1.0) {
 					ballStop.setPosition(Constants.Shooter.BALL_STOP_UP);
@@ -255,7 +258,7 @@ public class Manual extends LinearOpMode {
 			//------------------------------------------
 			//INTAKE RETRACTION
 
-			/*
+
 			//Extend intake subassembly
 			if(gamepad1.a) {
 				intakeRetractorLeft.setPosition(Constants.Intake.INTAKE_RETRACTOR_EXTENDED_POS);
@@ -266,7 +269,7 @@ public class Manual extends LinearOpMode {
 				intakeRetractorLeft.setPosition(Constants.Intake.INTAKE_RETRACTOR_RETRACTED_POS);
 				intakeRetractorRight.setPosition(Constants.Intake.INTAKE_RETRACTOR_RETRACTED_POS);
 			}
-*/
+
 
 			telemetry.update();
 		}
@@ -291,3 +294,4 @@ public class Manual extends LinearOpMode {
 }
 
 
+*/

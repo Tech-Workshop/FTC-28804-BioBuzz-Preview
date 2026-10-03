@@ -17,9 +17,10 @@ public class Sorter {
 	}
 
 	public void sort() {
+		sorterServo.setPosition(Constants.Sorter.SORTER_EXTEND);
 	}
 
 	public void home() {
-
+		sorterServo.setPosition(Constants.Sorter.SORTER_RETRACT);
 	}
 }

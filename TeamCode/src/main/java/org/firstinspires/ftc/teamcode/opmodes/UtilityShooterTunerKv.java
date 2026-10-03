@@ -7,22 +7,22 @@ import com.qualcomm.robotcore.hardware.DcMotorEx;
 
 import org.firstinspires.ftc.teamcode.Constants;
 
-/*
+
 @TeleOp(group = "UTILITY",name="Utility: Shooter kV")
 public class UtilityShooterTunerKv extends OpMode {
 
 	private DcMotorEx shooter;
 	double[] increments = { 0.000001, 0.00001, 0.0001, 0.001, 0.01 };
 	int incrementIndex = 4;
-	double kS=0.09;
+	double kS=0.05;
 	double kV=0.0;
-	double goalVelocity=1730;
+	double goalVelocity=1600;
 
 	@Override
 	public void init() {
-		shooter = hardwareMap.get(DcMotorEx.class, Constants.Shooter.SHOOTER_ID);
+		shooter = hardwareMap.get(DcMotorEx.class, Constants.Shooter.SHOOTER_POLLEN_ID);
 		shooter.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-		shooter.setDirection(Constants.Shooter.SHOOTER_DIRECTION);
+		shooter.setDirection(Constants.Shooter.SHOOTER_POLLEN_DIRECTION);
 	}
 
 	@Override
@@ -49,4 +49,3 @@ public class UtilityShooterTunerKv extends OpMode {
 		telemetry.addData("Increment",increments[incrementIndex]);
 	}
 }
-*/

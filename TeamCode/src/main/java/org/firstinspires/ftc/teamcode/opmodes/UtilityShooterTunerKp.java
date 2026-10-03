@@ -9,25 +9,25 @@ import com.qualcomm.robotcore.hardware.DcMotorEx;
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.firstinspires.ftc.teamcode.Constants;
 
-/*
+
 @TeleOp(group = "UTILITY",name="Utility: Shooter kP")
 public class UtilityShooterTunerKp extends OpMode {
 
 	private DcMotorEx shooter;
 	double[] increments = { 0.000001, 0.00001, 0.0001, 0.001, 0.01 };
 	int incrementIndex = 2;
-	double kS=0.09;
-	double kV=0.00035;
+	double kS=0.05;
+	double kV=0.00034;
 	public static double kP=0.0;
-	double goalVelocity=1730;
+	double goalVelocity=1600;
 	FtcDashboard dashboard=FtcDashboard.getInstance();
 	Telemetry d_telemetry=dashboard.getTelemetry();
 
 	@Override
 	public void init() {
-		shooter = hardwareMap.get(DcMotorEx.class, Constants.Shooter.SHOOTER_ID);
+		shooter = hardwareMap.get(DcMotorEx.class, Constants.Shooter.SHOOTER_POLLEN_ID);
 		shooter.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-		shooter.setDirection(Constants.Shooter.SHOOTER_DIRECTION);
+		shooter.setDirection(Constants.Shooter.SHOOTER_POLLEN_DIRECTION);
 	}
 
 	@Override
@@ -71,4 +71,3 @@ public class UtilityShooterTunerKp extends OpMode {
 		d_telemetry.update();
 	}
 }
-*/

@@ -7,8 +7,8 @@ import com.pedropathing.paths.Path;
 import static com.pedropathing.api.Paths.*;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import com.pedropathing.ivy.Command;
 import com.pedropathing.ivy.Scheduler;
@@ -20,8 +20,9 @@ import static com.pedropathing.ivy.pedro.PedroCommands.follow;
 
 import org.firstinspires.ftc.teamcode.pedro.Constants;
 
+@Disabled
 @Autonomous(name="Auto (Demo)")
-public class AutoDemo extends OpMode {
+public class XXX_AutoDemo extends OpMode {
 	private Follower follower;
 	private final PoseFactory poseFactory = PoseFactory.degrees();
 

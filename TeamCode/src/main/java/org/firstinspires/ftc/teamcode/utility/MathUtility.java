@@ -1,9 +1,17 @@
 package org.firstinspires.ftc.teamcode.utility;
 
+import com.pedropathing.math.Pose;
+
 import java.util.Collections;
 import java.util.List;
 
 public class MathUtility {
+	public static Pose translateRedPoseToBlue(Pose redPose) {
+		Pose bluePose;
+		bluePose=new Pose((70.75-redPose.x())+70.75,141.5-redPose.y(),normalizeAngle(redPose.heading()+Math.PI));
+		return bluePose;
+	}
+
 	public static double clamp(double num, double min, double max) {
 		return Math.max(min, Math.min(num, max));
 	}
