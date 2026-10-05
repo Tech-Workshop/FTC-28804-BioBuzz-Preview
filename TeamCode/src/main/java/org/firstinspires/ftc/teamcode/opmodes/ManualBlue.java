@@ -96,8 +96,10 @@ double tmpShooterV=2000;
 			//Index
 			if(gamepad2.left_trigger>=Constants.General.CONTROLLER_DEADBAND) {
 				robot.indexer.index();
+				robot.indexer.sortSpeed(); //NEW
 
-			//Expel
+
+				//Expel
 			} else if(gamepad2.left_bumper) {
 				robot.indexer.reverse();
 

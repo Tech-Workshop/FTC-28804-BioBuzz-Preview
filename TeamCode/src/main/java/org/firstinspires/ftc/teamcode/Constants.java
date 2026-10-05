@@ -116,8 +116,8 @@ public class Constants {
 		public static final double SHOOTER_PID_kS=0.05,SHOOTER_PID_kV=0.00034,SHOOTER_PID_kP=0.0009;
 		public static final double SHOOTER_RAMP_RATE=0.20;
 
-		public static final double SHOOTER_NECTAR_VELOCITY=2075; //Speed for nectar ball shot
-		public static final double SHOOTER_POLLEN_VELOCITY=1900; //Speed for pollen ball shot
+		public static final double SHOOTER_NECTAR_VELOCITY=2175; //Speed for nectar ball shot (2075)
+		public static final double SHOOTER_POLLEN_VELOCITY=2100; //Speed for pollen ball shot (1900)
 
 		public static final String BALLSTOP_NECTAR_ID = "ballstop_nectar"; //Axon Max+
 		public static final double BALLSTOP_NECTAR_BLOCK=0.63; //Minimum down position

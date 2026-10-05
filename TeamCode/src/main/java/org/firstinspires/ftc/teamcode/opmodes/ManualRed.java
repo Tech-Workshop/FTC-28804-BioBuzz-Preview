@@ -83,6 +83,7 @@ public class ManualRed extends LinearOpMode {
 			//Intake
 			if(gamepad2.right_trigger>=Constants.General.CONTROLLER_DEADBAND) {
 				robot.intake.intake();
+				robot.indexer.sortSpeed(); //NEW
 
 				//Expel
 			} else if(gamepad2.right_bumper) {
