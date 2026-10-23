@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode.opmodes;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -10,6 +11,8 @@ public class Sample extends LinearOpMode {
 	DcMotor shooterMotor;
 	Servo testServo;
 
+	boolean firstLoop=true;
+
 	@Override
 	public void runOpMode() throws InterruptedException {
 		//Initialize sensors and actuators here
@@ -20,8 +23,25 @@ public class Sample extends LinearOpMode {
 
 		//Main loop
 		while (opModeIsActive() && !isStopRequested()) {
+			if(firstLoop) {
+				//did stuff
+				firstLoop=false;
+			}
 
 
+
+			telemetry.addData("Shooter motor power:",shooterMotor.getPower());
+			telemetry.addLine("Leo and Rowan are awesome!");
+
+
+
+
+
+
+
+
+			telemetry.update();
 		}
 	}
 }
+*/

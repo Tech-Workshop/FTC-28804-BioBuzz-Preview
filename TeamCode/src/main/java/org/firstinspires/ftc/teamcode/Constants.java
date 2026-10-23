@@ -72,7 +72,7 @@ public class Constants {
 		public static final DcMotorSimple.Direction DRIVE_RIGHT_BACK_DIRECTION = DcMotorSimple.Direction.FORWARD;
 
 		//Maximum speed multiplier (0-1.0)
-		public static final double DRIVE_SPEED = 0.60;
+		public static final double DRIVE_SPEED = 1.00;
 		public static final double TURN_POWER_MULTIPLIER = 0.6;
 		public static final double TURN_POWER_EXTENDED = 0.45;
 
